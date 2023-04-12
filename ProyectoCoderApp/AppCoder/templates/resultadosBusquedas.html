@@ -1,0 +1,26 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<p>Estamos buscando la: {{matricula}}</p>
+
+
+{% if avion %}
+
+        <ul>
+            
+            {% for aviones in avion %}
+                <li> {{avion.marca}}</li>
+                <li> {{avion.matricula}}</li>
+
+                
+            {% endfor %}
+                
+        </ul>
+    
+{% endif %}
+    
+
+{% endblock contenidoQueCambia %}

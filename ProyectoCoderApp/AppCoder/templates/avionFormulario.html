@@ -1,0 +1,23 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Formulario Avion</h1>
+
+    <form action="{% url 'AvionFormulario' %}" method="POST">{% csrf_token %}
+
+        <!-- {{miFormulario.as_p}} -->
+
+        <p>Avion: <input type="text" name="marca"></p>
+
+        <p>Matricula: <input type="text" name="matricula"></p>
+
+        <button type="submit"> Enviar </button>
+
+    </form>
+
+
+{% endblock contenidoQueCambia %}
+    
