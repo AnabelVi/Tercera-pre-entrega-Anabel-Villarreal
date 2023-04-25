@@ -6,13 +6,21 @@
 
 <h1>Formulario Busqueda Matricula</h1>
 
-    <form action="/AppCoder/buscar/" method="GET">
+    <form action="{% url 'Buscar' %}" method="GET">
+
+        <p>Matricula: <input type="text" name="matricula" id="matricula"></p>
+
+        <input type="submit" value="Buscar">
+        
+    </form>
+    
+{% endblock contenidoQueCambia %}
+
+<!-- <form action="/AppCoder/buscar/" method="GET">
 
         <input type="text" name="matricula" id="matricula">
 
         <input type="submit" value="Buscar">
 
 
-    </form>
-
-{% endblock contenidoQueCambia %}
+    </form> -->

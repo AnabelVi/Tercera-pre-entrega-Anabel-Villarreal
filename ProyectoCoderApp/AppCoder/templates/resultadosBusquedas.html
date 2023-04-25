@@ -4,23 +4,20 @@
 
 {% block contenidoQueCambia %}
 
-<p>Estamos buscando la: {{matricula}}</p>
+<p>Estas buscando el avion con la matricula: </p>
+            <ul><li>  {{matricula}} </li></ul>
 
-
-{% if avion %}
-
-        <ul>
-            
-            {% for aviones in avion %}
-                <li> {{avion.marca}}</li>
-                <li> {{avion.matricula}}</li>
-
-                
+    {% if aviones %}
+        <ul>   
+            {% for avion in aviones %}
+                <li> 
+                    {{avion.marca}} - {{avion.matricula}}
+                </li>           
             {% endfor %}
-                
+                    
         </ul>
-    
-{% endif %}
-    
+    {% else %}
+        <p>No se encontro ninguna matricula: {{matricula}}.</p>
+    {% endif %} 
 
 {% endblock contenidoQueCambia %}

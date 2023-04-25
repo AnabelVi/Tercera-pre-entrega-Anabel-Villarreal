@@ -13,5 +13,7 @@ urlpatterns = [
     path('planDeVuelo/', planDeVuelo, name="PlanDeVuelo"),
     path('avionFormulario/', avionFormulario, name="AvionFormulario"),
     path('busquedaMatricula/', busquedaMatricula, name="BusquedaMatricula"),
-    path('buscar/', buscar),
+    path('buscar/', buscar, name="Buscar"),
+    path('listaPilotos/', listaPilotos, name="ListaPilotos"),
+    path('crea-piloto/', crea_piloto, name="CreaPiloto"),
 ]

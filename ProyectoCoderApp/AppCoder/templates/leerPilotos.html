@@ -1,0 +1,17 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Lista de Pilotos</h1>
+    <ul>        
+        {% for piloto in pilotos %}
+            <li>
+                {{ piloto }}
+            </li>
+        {% endfor %}    
+    </ul>
+    <a href="{% url 'CreaPiloto' %}">Añadir otro Piloto</a>
+
+{% endblock contenidoQueCambia %}
