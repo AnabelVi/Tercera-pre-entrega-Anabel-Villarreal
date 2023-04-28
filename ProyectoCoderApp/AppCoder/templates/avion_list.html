@@ -1,0 +1,28 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Lista de Aviones</h1>
+    <ul>        
+        {% for avion in avion %}
+            <li>
+                <a href="{% url 'DetalleAvion' avion.id %}">
+                    {{ avion }}
+                </a>
+            </li>
+            <div style="display: flex; column-gap: 5px;">
+                <button>
+                    <a href="{% url 'EliminaAvion' avion.id %}">Eliminar</a>
+                </button>                
+                <button>
+                    <a href="{% url 'ActualizaAvion' avion.id %}">Editar</a>
+                </button>
+
+            </div>
+
+        {% endfor %}    
+    </ul>
+    <a href="{% url 'CreaAvion' %}">Añadir otro Avion</a>
+{% endblock contenidoQueCambia %}

@@ -7,7 +7,7 @@ class Avion(models.Model):
     matricula = models.CharField(max_length=50)
 
     def __str__(self):
-        return f'{self.marca}-{self.matricula}'
+        return f'{self.marca} - {self.matricula}'
 
 class Pasajero(models.Model):
     nombre = models.CharField(max_length=50)
