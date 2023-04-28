@@ -4,4 +4,7 @@ A través de la url local host http://127.0.0.1:8000/app-coder/avionFormulario/ 
 
 La url http://127.0.0.1:8000/app-coder/busquedaMatricula/ permite acceder a la busqueda de matriculas
 
-Python 3.10.7
+asgiref==3.6.0
+Django==4.2
+sqlparse==0.4.3
+tzdata==2023.3
